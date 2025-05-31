@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kingsman Barber</title>
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="servicos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="./img/logo-kingsman.png"
+          alt="Logo Kingsman"
+          class="logo-icon"
+        />
+        <h1>Kingsman Barber</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#barbeiros">Barbeiros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#agendar">Agendar Horário</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content-wrapper">
+          <!-- Alteração aqui: Adicionando classes ao h2 e spans -->
+          <h2 class="hero-title">
+            <span class="hero-text-light">ONDE O ESTILO</span>
+            <span class="hero-text-medium">GANHA PODER</span>
+          </h2>
+          <button>Conheça nossos serviços</button>
+          <button>Agende um horário</button>
+        </div>
+      </section>
+    </main>
+
+    <!--Serviços-->
+
+    <section id="servicos" class="servicos-section">
+      <div class="container">
+        <!-- Título Principal da Seção -->
+        <div class="title-container">
+          <img
+            src="img/orns-esq-blk.png"
+            alt="Ornamento esquerdo"
+            class="title-ornament left"
+          />
+          <h2 class="section-title">SERVIÇOS</h2>
+          <img
+            src="img/orns-dir-blk.png"
+            alt="Ornamento direito"
+            class="title-ornament right"
+          />
+        </div>
+
+        <!-- Grid de Serviços (Quatro Colunas) -->
+        <div class="servicos-grid">
+          <div class="servico-column">
+            <img src="img/servico-corte.png" alt="Imagem de Corte de Cabelo" />
+            <p class="servico-description">
+              Um CORTE DE CABELO executado com precisão, adaptado ao seu estilo
+              e preferências, seja clássico ou moderno.
+            </p>
+          </div>
+          <div class="servico-column">
+            <img src="img/servico-barba.png" alt="Imagem de Corte de Barba" />
+            <p class="servico-description">
+              Design, modelagem e finalização da sua BARBA, utilizando as
+              melhores técnicas para um contorno definido e um toque suave.
+            </p>
+          </div>
+          <div class="servico-column">
+            <img src="img/servico-alisamento.png" alt="Imagem de Alisamento" />
+            <p class="servico-description">
+              Transforme o seu estilo com o nosso serviço de ALISAMENTO
+              profissional.
+            </p>
+          </div>
+          <div class="servico-column">
+            <img
+              src="img/servico-tratfacial.png"
+              alt="Imagem de Tratamento Facial"
+            />
+            <p class="servico-description">
+              Um TRATAMENTO FACIAL essencial para revitalizar a pele, removendo
+              impurezas e promovendo uma aparência mais saudável e luminosa.
+            </p>
+          </div>
+        </div>
+
+        <!-- Seção de Chamada para Ação (CTA) com Ornamentos -->
+        <div class="cta-section">
+          <img
+            src="img/ornamentos-cima.png"
+            alt="Ornamento decorativo superior"
+            class="ornamento"
+          />
+          <p class="cta-text">
+            ENTRE EM CONTACTO E CONHEÇA OS NOSSOS
+            <span class="cta-bold">SERVIÇOS COMBINADOS!</span>
+          </p>
+          <img
+            src="img/ornamentos-baixo.png"
+            alt="Ornamento decorativo inferior"
+            class="ornamento"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

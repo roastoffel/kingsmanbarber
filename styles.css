@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #000;
+  color: white;
+  padding: 1vh 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  /* Novo: Largura responsiva para o logo, proporcional ao título */
+  width: clamp(30px, 3.75vw, 54px);
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-family: "Stanford Breath", Arial, sans-serif;
+  color: #b29146;
+  font-size: clamp(20px, 2.5vw, 36px);
+  white-space: nowrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5vw;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background-image: url("./img/kingsman.png");
+  background-size: cover;
+  background-position: left center;
+  color: white;
+  width: 100%;
+  min-height: 90vh;
+  position: relative;
+  padding: 0 2vw;
+}
+
+.hero-content-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Estilos base para o título da seção hero */
+.hero-title {
+  font-size: 2.5em; /* Tamanho da fonte padrão */
+  margin-bottom: 2vh; /* Margem inferior padrão */
+  /* Fallback genérico para caso as fontes Gotham não carreguem */
+  font-family: sans-serif;
+}
+
+/* Estilo para a parte "ONDE O ESTILO" */
+.hero-title .hero-text-light {
+  font-family: "Gotham", sans-serif; /* Aplica a família Gotham */
+  font-weight: 300; /* Aplica o peso Light */
+}
+
+/* Estilo para a parte "GANHA PODER" */
+.hero-title .hero-text-medium {
+  font-family: "Gotham", sans-serif; /* Aplica a família Gotham */
+  font-weight: 500; /* Aplica o peso Medium */
+}
+
+.hero button {
+  border: none;
+  padding: 10px;
+  margin: 0.5vh;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: "Archivo ExtraCondensed", sans-serif;
+  font-weight: 400;
+}
+
+.hero button:nth-of-type(1) {
+  /* Seleciona o 1º botão */
+  background-color: #000000; /* Fundo preto */
+  color: #ffffff; /* Texto branco */
+}
+
+.hero button:nth-of-type(2) {
+  /* Seleciona o 2º botão */
+  background-color: #b29146; /* Fundo dourado */
+  color: #000000; /* Texto preto */
+}
+
+.hero button:hover {
+  opacity: 0.8;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  nav ul {
+    gap: 2vw;
+  }
+
+  /* Ajuste do tamanho da fonte do título hero para telas maiores */
+  .hero-title {
+    font-size: 3em;
+  }
+
+  .hero button {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 2vh 4vw;
+  }
+
+  .hero {
+    padding: 0 4vw;
+  }
+}

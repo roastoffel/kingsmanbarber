@@ -1,0 +1,181 @@
+.servicos-section {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background-image: url("img/bg-servicos.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+}
+
+/* Título Principal da Seção */
+.servicos-section .section-title {
+  font-family: "Gotham Book", sans-serif;
+  font-size: clamp(32px, 3vw, 40px);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.title-ornament {
+  width: clamp(1.5rem, 2.5vw, 2.5rem);
+  height: clamp(1.6rem, 2.6vw, 2.6rem);
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.title-ornament.left {
+  margin-right: clamp(10px, 1.5vw, 20px);
+}
+
+.title-ornament.right {
+  margin-left: clamp(10px, 1.5vw, 20px);
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Padrão para telas maiores */
+  gap: 0px;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+}
+
+.servico-column {
+  padding: 25px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.servico-column:hover {
+  transform: translateY(-10px);
+}
+
+.servico-column img {
+  width: 253px; /* Padrão para telas maiores */
+  height: 273px; /* Padrão para telas maiores */
+  object-fit: contain;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* Nova configuração da sombra com raio de desfoque 5px e opacidade 0.40 */
+  filter: drop-shadow(0px 6px 5px rgba(0, 0, 0, 0.4));
+}
+
+.servico-column .servico-description {
+  font-family: "Archivo ExtraCondensed", sans-serif;
+  font-weight: 500;
+  font-size: 1.1em; /* Padrão para telas maiores */
+  line-height: 1.5;
+  color: black;
+  text-align: left;
+  max-width: 253px; /* Padrão para telas maiores */
+}
+
+.cta-section {
+  margin-top: 0;
+  padding: 40px 20px; /* Padrão para telas maiores */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-section .cta-text {
+  font-family: "Archivo ExtraCondensed", sans-serif;
+  font-weight: 500;
+  font-size: 1.4em; /* Padrão para telas maiores */
+  text-transform: uppercase;
+  color: black;
+  line-height: 1.3;
+  margin: 20px 0;
+}
+
+.cta-section .cta-bold {
+  font-family: "Archivo ExtraCondensed", sans-serif;
+  font-weight: 700;
+  color: black;
+}
+
+.cta-section .ornamento {
+  width: 363px;
+  height: 21px;
+  display: block;
+  margin: 0 auto 20px auto; /* Ajuste de margem para consistência */
+}
+
+.cta-section .ornamento:last-of-type {
+  margin-top: 20px; /* Ajuste de margem para consistência */
+  margin-bottom: 0;
+}
+
+/* --- Media Queries --- */
+
+/* Estilos para telas de até 1023px de largura (tablets e desktops menores) */
+@media (max-width: 1023px) {
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    max-width: 700px;
+  }
+
+  .servico-column img {
+    width: 200px; /* Reduz o tamanho da imagem */
+    height: auto;
+  }
+
+  .servico-column .servico-description {
+    max-width: 200px; /* Ajusta a largura máxima da descrição */
+  }
+
+  .cta-section .cta-text {
+    font-size: 1.4em;
+  }
+}
+
+/* Estilos para telas de até 767px de largura (dispositivos móveis) */
+@media (max-width: 767px) {
+  .title-ornament {
+    width: 24px; /* Reduz o tamanho dos ornamentos do título */
+    height: auto;
+    margin: 0 10px;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr; /* Uma coluna */
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+
+  .servico-column {
+    padding: 20px; /* Reduz o padding das colunas de serviço */
+  }
+
+  .servico-column .servico-description {
+    font-size: 1em; /* Reduz o tamanho da fonte da descrição para mobile */
+  }
+
+  .cta-section {
+    padding: 30px 15px; /* Reduz o padding da seção CTA */
+  }
+
+  .cta-section .cta-text {
+    font-size: 1.2em; /* Reduz o tamanho da fonte do CTA para mobile */
+  }
+
+  .cta-section .ornamento {
+    max-width: 90%; /* Ajusta a largura máxima dos ornamentos do CTA */
+    height: auto;
+  }
+}

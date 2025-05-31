@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Stanford Breath";
+  src: url("./fonts/stanford_breath-webfont.woff2") format("woff2"),
+    url("./fonts/stanford_breath-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Archivo ExtraCondensed";
+  src: url("./fonts/archivo_extracondensed-medium.woff2") format("woff2"),
+    url("./fonts/archivo_extracondensed-medium.woff") format("woff");
+  font-weight: 500; /* Peso Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo ExtraCondensed";
+  src: url("./fonts/archivo-extracondensed-bold.woff2") format("woff2"),
+    url("./fonts/archivo-extracondensed-bold.woff") format("woff");
+  font-weight: 700; /* Peso Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Book";
+  src: url("fonts/Gotham-Book.woff2") format("woff2"),
+    url("fonts/Gotham-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham-Light.woff2") format("woff2"),
+    url("./fonts/Gotham-Light.woff") format("woff");
+  font-weight: 300; /* Peso para Gotham Light */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham"; /* Nome da família para Light e Medium */
+  src: url("./fonts/Gotham-Medium.woff2") format("woff2"),
+    url("./fonts/Gotham-Medium.woff") format("woff");
+  font-weight: 500; /* Peso para Gotham Medium */
+  font-style: normal;
+  font-display: swap;
+}
