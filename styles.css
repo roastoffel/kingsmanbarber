@@ -25,7 +25,6 @@ header {
 }
 
 .logo-icon {
-  /* Novo: Largura responsiva para o logo, proporcional ao título */
   width: clamp(30px, 3.75vw, 54px);
   height: auto;
   margin-right: 10px;
@@ -73,24 +72,20 @@ nav a {
   text-align: center;
 }
 
-/* Estilos base para o título da seção hero */
 .hero-title {
-  font-size: 2.5em; /* Tamanho da fonte padrão */
-  margin-bottom: 2vh; /* Margem inferior padrão */
-  /* Fallback genérico para caso as fontes Gotham não carreguem */
+  font-size: 2.5em;
+  margin-bottom: 2vh;
   font-family: sans-serif;
 }
 
-/* Estilo para a parte "ONDE O ESTILO" */
 .hero-title .hero-text-light {
-  font-family: "Gotham", sans-serif; /* Aplica a família Gotham */
-  font-weight: 300; /* Aplica o peso Light */
+  font-family: "Gotham", sans-serif;
+  font-weight: 300;
 }
 
-/* Estilo para a parte "GANHA PODER" */
 .hero-title .hero-text-medium {
-  font-family: "Gotham", sans-serif; /* Aplica a família Gotham */
-  font-weight: 500; /* Aplica o peso Medium */
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
 }
 
 .hero button {
@@ -104,15 +99,13 @@ nav a {
 }
 
 .hero button:nth-of-type(1) {
-  /* Seleciona o 1º botão */
-  background-color: #000000; /* Fundo preto */
-  color: #ffffff; /* Texto branco */
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .hero button:nth-of-type(2) {
-  /* Seleciona o 2º botão */
-  background-color: #b29146; /* Fundo dourado */
-  color: #000000; /* Texto preto */
+  background-color: #b29146;
+  color: #000000;
 }
 
 .hero button:hover {
@@ -137,6 +130,9 @@ nav a {
     top: 60px;
     right: 0;
     width: 200px;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 
   nav ul.show {
@@ -153,7 +149,6 @@ nav a {
     gap: 2vw;
   }
 
-  /* Ajuste do tamanho da fonte do título hero para telas maiores */
   .hero-title {
     font-size: 3em;
   }
