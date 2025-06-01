@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kingsman Barber</title>
+    <link rel="icon" href="./img/favicon.ico" sizes="any" />
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
     <link rel="stylesheet" href="fonts.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="servicos.css" />
+    <link rel="stylesheet" href="barbeiros.css" />
   </head>
   <body>
     <header>
@@ -29,9 +34,9 @@
     <main>
       <section class="hero">
         <div class="hero-content-wrapper">
-          <!-- Alteração aqui: Adicionando classes ao h2 e spans -->
           <h2 class="hero-title">
             <span class="hero-text-light">ONDE O ESTILO</span>
+            <br class="break-line" />
             <span class="hero-text-medium">GANHA PODER</span>
           </h2>
           <button>Conheça nossos serviços</button>
@@ -40,11 +45,8 @@
       </section>
     </main>
 
-    <!--Serviços-->
-
     <section id="servicos" class="servicos-section">
       <div class="container">
-        <!-- Título Principal da Seção -->
         <div class="title-container">
           <img
             src="img/orns-esq-blk.png"
@@ -59,7 +61,6 @@
           />
         </div>
 
-        <!-- Grid de Serviços (Quatro Colunas) -->
         <div class="servicos-grid">
           <div class="servico-column">
             <img src="img/servico-corte.png" alt="Imagem de Corte de Cabelo" />
@@ -94,7 +95,6 @@
           </div>
         </div>
 
-        <!-- Seção de Chamada para Ação (CTA) com Ornamentos -->
         <div class="cta-section">
           <img
             src="img/ornamentos-cima.png"
@@ -110,6 +110,73 @@
             alt="Ornamento decorativo inferior"
             class="ornamento"
           />
+        </div>
+      </div>
+    </section>
+
+    <section id="barbeiros" class="barbeiros-section">
+      <div class="title-container">
+        <img
+          src="img/orns-esq-gold.png"
+          alt="Ornamento esquerdo"
+          class="title-ornament left"
+        />
+        <h2 class="section-title">BARBEIROS</h2>
+        <img
+          src="img/orns-dir-gold.png"
+          alt="Ornamento direito"
+          class="title-ornament right"
+        />
+      </div>
+
+      <div class="barbeiros-grid">
+        <div class="barbeiro-card">
+          <div class="barbeiro-image-wrapper">
+            <img src="img/barb-andre.png" alt="André" />
+            <h3>ANDRÉ</h3>
+          </div>
+        </div>
+        <div class="barbeiro-card">
+          <div class="barbeiro-image-wrapper">
+            <img src="img/barb-vinicius.png" alt="Vinícius" />
+            <h3>VINÍCIUS</h3>
+          </div>
+        </div>
+        <div class="barbeiro-card">
+          <div class="barbeiro-image-wrapper">
+            <img src="img/barb-allyson.png" alt="Allyson" />
+            <h3>ALLYSON</h3>
+          </div>
+        </div>
+        <div class="barbeiro-card">
+          <div class="barbeiro-image-wrapper">
+            <img src="img/barb-jonathas.png" alt="Jônathas" />
+            <h3>JÔNATHAS</h3>
+          </div>
+        </div>
+        <div class="barbeiro-card">
+          <div class="barbeiro-image-wrapper">
+            <img src="img/barb-jussyer.png" alt="Jussyer" />
+            <h3>JUSSYER</h3>
+          </div>
+        </div>
+        <div class="barbeiro-card">
+          <div class="barbeiro-image-wrapper">
+            <img src="img/barb-kevin.png" alt="Kevin" />
+            <h3>KEVIN</h3>
+          </div>
+        </div>
+        <div class="barbeiro-card">
+          <div class="barbeiro-image-wrapper">
+            <img src="img/barb-renato.png" alt="Renato" />
+            <h3>RENATO</h3>
+          </div>
+        </div>
+        <div class="barbeiro-card">
+          <div class="barbeiro-image-wrapper">
+            <img src="img/barb-ricardo.png" alt="Ricardo" />
+            <h3>RICARDO</h3>
+          </div>
         </div>
       </div>
     </section>

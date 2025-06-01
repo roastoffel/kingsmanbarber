@@ -1,9 +1,10 @@
 .servicos-section {
   padding: clamp(3rem, 6vw, 5rem) 0;
-  background-image: url("img/bg-servicos.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-image: url("img/bg-servicos.jpg");
+  background-size: 100% auto; /* Imagem ocupa 100% da largura, altura automática */
+  background-position: center top; /* Começa do topo */
+  background-repeat: repeat-y; /* Repete verticalmente */
+  background-attachment: scroll;
   color: #fff;
   text-align: center;
 }
@@ -127,16 +128,17 @@
 @media (max-width: 1023px) {
   .servicos-grid {
     grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-    max-width: 700px;
+    max-width: 550px; /* Ajustado para acomodar 2 imagens de 253px + gap */
   }
 
-  .servico-column img {
-    width: 200px; /* Reduz o tamanho da imagem */
+  /* Removida a redução de tamanho da imagem aqui */
+  /* .servico-column img {
+    width: 200px;
     height: auto;
-  }
+  } */
 
   .servico-column .servico-description {
-    max-width: 200px; /* Ajusta a largura máxima da descrição */
+    max-width: 253px; /* Mantém a largura máxima da descrição */
   }
 
   .cta-section .cta-text {
@@ -144,8 +146,9 @@
   }
 }
 
-/* Estilos para telas de até 767px de largura (dispositivos móveis) */
-@media (max-width: 767px) {
+/* Estilos para telas de até 600px de largura (dispositivos móveis) */
+@media (max-width: 600px) {
+  /* ALTERADO: Breakpoint de 767px para 600px */
   .title-ornament {
     width: 24px; /* Reduz o tamanho dos ornamentos do título */
     height: auto;
@@ -154,7 +157,7 @@
 
   .servicos-grid {
     grid-template-columns: 1fr; /* Uma coluna */
-    max-width: 350px;
+    max-width: 300px; /* Ajustado para acomodar 1 imagem de 253px */
     margin-bottom: 20px;
   }
 

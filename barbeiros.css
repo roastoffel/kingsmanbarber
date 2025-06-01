@@ -1,0 +1,141 @@
+/* Seção BARBEIROS */
+.barbeiros-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("img/paperwall.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding: clamp(3rem, 6vw, 5rem) 20px;
+  min-height: 80vh;
+  position: relative;
+}
+
+/* Título da Seção Barbeiros */
+.barbeiros-section .section-title {
+  font-family: "Gotham Book", sans-serif;
+  font-size: clamp(32px, 3vw, 40px);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #b29146;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.barbeiros-section .title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+  width: 100%;
+  max-width: 900px;
+}
+
+.barbeiros-section .title-ornament {
+  width: clamp(1.5rem, 2.5vw, 2.5rem);
+  height: clamp(1.6rem, 2.6vw, 2.6rem);
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.barbeiros-section .title-ornament.left {
+  margin-right: clamp(10px, 1.5vw, 20px);
+}
+
+.barbeiros-section .title-ornament.right {
+  margin-left: clamp(10px, 1.5vw, 20px);
+}
+
+/* Grid dos Barbeiros */
+.barbeiros-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas para telas maiores */
+  gap: 30px;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 40px;
+}
+
+.barbeiro-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+}
+
+.barbeiro-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Wrapper para imagem e nome */
+.barbeiro-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 198px; /* Largura original da imagem */
+  height: 291px; /* Altura original da imagem */
+  overflow: hidden;
+}
+
+.barbeiro-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0;
+}
+
+.barbeiro-card h3 {
+  position: absolute;
+  bottom: 30px; /* ALTERADO: Distância da base para 30px */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Archivo ExtraCondensed Light", sans-serif;
+  font-weight: 300;
+  font-size: clamp(18px, 2.5vw, 30px);
+  color: #b29146;
+  margin: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+  .barbeiros-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+    max-width: 450px;
+  }
+
+  .barbeiro-image-wrapper {
+    width: 180px; /* Largura máxima de 180px */
+    height: 264px; /* Altura proporcional a 180px de largura */
+  }
+}
+
+@media (max-width: 600px) {
+  .barbeiros-grid {
+    grid-template-columns: 1fr; /* 1 coluna para telas menores que 600px */
+    max-width: 250px;
+  }
+
+  .barbeiro-image-wrapper {
+    width: 180px; /* Mantém a largura de 180px */
+    height: 264px; /* Mantém a altura proporcional */
+  }
+}
+
+@media (max-width: 480px) {
+  .barbeiro-image-wrapper {
+    width: 100%;
+    height: auto;
+    max-width: 180px;
+  }
+}

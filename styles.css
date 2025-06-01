@@ -5,7 +5,6 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
   overflow-x: hidden;
 }
 
@@ -17,6 +16,10 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -73,7 +76,7 @@ nav a {
 }
 
 .hero-title {
-  font-size: 2.5em;
+  font-size: clamp(30px, 9.375vw, 3em);
   margin-bottom: 2vh;
   font-family: sans-serif;
 }
@@ -86,6 +89,10 @@ nav a {
 .hero-title .hero-text-medium {
   font-family: "Gotham", sans-serif;
   font-weight: 500;
+}
+
+.hero-title .break-line {
+  display: none;
 }
 
 .hero button {
@@ -142,15 +149,21 @@ nav a {
   .menu-toggle {
     display: block;
   }
+
+  .hero-content-wrapper {
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-title .break-line {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
   nav ul {
     gap: 2vw;
-  }
-
-  .hero-title {
-    font-size: 3em;
   }
 
   .hero button {
