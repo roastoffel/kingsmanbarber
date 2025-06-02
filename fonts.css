@@ -7,19 +7,19 @@
 }
 
 @font-face {
-  font-family: "Archivo ExtraCondensed Light"; /* Nome da família da fonte que você usará no CSS */
+  font-family: "Archivo ExtraCondensed Light";
   src: url("fonts/archivo_extracondensed-light.woff2") format("woff2"),
     url("fonts/archivo_extracondensed-light.woff") format("woff");
-  font-weight: 300; /* Peso da fonte para 'Light' */
+  font-weight: 300;
   font-style: normal;
-  font-display: swap; /* Garante que o texto seja visível enquanto a fonte carrega */
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Archivo ExtraCondensed";
   src: url("./fonts/archivo_extracondensed-medium.woff2") format("woff2"),
     url("./fonts/archivo_extracondensed-medium.woff") format("woff");
-  font-weight: 500; /* Peso Medium */
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -28,7 +28,7 @@
   font-family: "Archivo ExtraCondensed";
   src: url("./fonts/archivo-extracondensed-bold.woff2") format("woff2"),
     url("./fonts/archivo-extracondensed-bold.woff") format("woff");
-  font-weight: 700; /* Peso Bold */
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -46,16 +46,16 @@
   font-family: "Gotham";
   src: url("./fonts/Gotham-Light.woff2") format("woff2"),
     url("./fonts/Gotham-Light.woff") format("woff");
-  font-weight: 300; /* Peso para Gotham Light */
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Gotham"; /* Nome da família para Light e Medium */
+  font-family: "Gotham";
   src: url("./fonts/Gotham-Medium.woff2") format("woff2"),
     url("./fonts/Gotham-Medium.woff") format("woff");
-  font-weight: 500; /* Peso para Gotham Medium */
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }

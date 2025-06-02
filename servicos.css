@@ -1,15 +1,14 @@
 .servicos-section {
   padding: clamp(3rem, 6vw, 5rem) 0;
   background-image: url("img/bg-servicos.jpg");
-  background-size: 100% auto; /* Imagem ocupa 100% da largura, altura automática */
-  background-position: center top; /* Começa do topo */
-  background-repeat: repeat-y; /* Repete verticalmente */
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: repeat-y;
   background-attachment: scroll;
   color: #fff;
   text-align: center;
 }
 
-/* Título Principal da Seção */
 .servicos-section .section-title {
   font-family: "Gotham Book", sans-serif;
   font-size: clamp(32px, 3vw, 40px);
@@ -44,7 +43,7 @@
 
 .servicos-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Padrão para telas maiores */
+  grid-template-columns: repeat(4, 1fr);
   gap: 0px;
   max-width: 1200px;
   margin: 0 auto 20px auto;
@@ -60,35 +59,30 @@
   align-items: center;
 }
 
-.servico-column:hover {
-  transform: translateY(-10px);
-}
-
 .servico-column img {
-  width: 253px; /* Padrão para telas maiores */
-  height: 273px; /* Padrão para telas maiores */
+  width: 253px;
+  height: 273px;
   object-fit: contain;
   margin: 0 auto;
   max-width: 100%;
   height: auto;
   display: block;
-  /* Nova configuração da sombra com raio de desfoque 5px e opacidade 0.40 */
   filter: drop-shadow(0px 6px 5px rgba(0, 0, 0, 0.4));
 }
 
 .servico-column .servico-description {
   font-family: "Archivo ExtraCondensed", sans-serif;
   font-weight: 500;
-  font-size: 1.1em; /* Padrão para telas maiores */
+  font-size: 1.21em;
   line-height: 1.5;
   color: black;
   text-align: left;
-  max-width: 253px; /* Padrão para telas maiores */
+  max-width: 253px;
 }
 
 .cta-section {
   margin-top: 0;
-  padding: 40px 20px; /* Padrão para telas maiores */
+  padding: 40px 20px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
@@ -97,7 +91,7 @@
 .cta-section .cta-text {
   font-family: "Archivo ExtraCondensed", sans-serif;
   font-weight: 500;
-  font-size: 1.4em; /* Padrão para telas maiores */
+  font-size: 1.4em;
   text-transform: uppercase;
   color: black;
   line-height: 1.3;
@@ -114,31 +108,22 @@
   width: 363px;
   height: 21px;
   display: block;
-  margin: 0 auto 20px auto; /* Ajuste de margem para consistência */
+  margin: 0 auto 20px auto;
 }
 
 .cta-section .ornamento:last-of-type {
-  margin-top: 20px; /* Ajuste de margem para consistência */
+  margin-top: 20px;
   margin-bottom: 0;
 }
 
-/* --- Media Queries --- */
-
-/* Estilos para telas de até 1023px de largura (tablets e desktops menores) */
 @media (max-width: 1023px) {
   .servicos-grid {
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-    max-width: 550px; /* Ajustado para acomodar 2 imagens de 253px + gap */
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 550px;
   }
 
-  /* Removida a redução de tamanho da imagem aqui */
-  /* .servico-column img {
-    width: 200px;
-    height: auto;
-  } */
-
   .servico-column .servico-description {
-    max-width: 253px; /* Mantém a largura máxima da descrição */
+    max-width: 253px;
   }
 
   .cta-section .cta-text {
@@ -146,39 +131,59 @@
   }
 }
 
-/* Estilos para telas de até 600px de largura (dispositivos móveis) */
+@media (max-width: 850px) {
+  .servicos-grid {
+    max-width: 450px;
+    gap: 15px;
+  }
+  .servico-column img {
+    width: 200px;
+    height: auto;
+  }
+  .servico-column .servico-description {
+    font-size: 1.1em;
+    max-width: 200px;
+  }
+}
+
 @media (max-width: 600px) {
-  /* ALTERADO: Breakpoint de 767px para 600px */
   .title-ornament {
-    width: 24px; /* Reduz o tamanho dos ornamentos do título */
+    width: 24px;
     height: auto;
     margin: 0 10px;
   }
 
   .servicos-grid {
-    grid-template-columns: 1fr; /* Uma coluna */
-    max-width: 300px; /* Ajustado para acomodar 1 imagem de 253px */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 320px;
     margin-bottom: 20px;
   }
 
   .servico-column {
-    padding: 20px; /* Reduz o padding das colunas de serviço */
+    padding: 10px;
+  }
+
+  .servico-column img {
+    width: 150px;
+    height: auto;
   }
 
   .servico-column .servico-description {
-    font-size: 1em; /* Reduz o tamanho da fonte da descrição para mobile */
+    font-size: 0.99em;
+    max-width: 150px;
   }
 
   .cta-section {
-    padding: 30px 15px; /* Reduz o padding da seção CTA */
+    padding: 30px 15px;
   }
 
   .cta-section .cta-text {
-    font-size: 1.2em; /* Reduz o tamanho da fonte do CTA para mobile */
+    font-size: 1.2em;
   }
 
   .cta-section .ornamento {
-    max-width: 90%; /* Ajusta a largura máxima dos ornamentos do CTA */
+    max-width: 90%;
     height: auto;
   }
 }

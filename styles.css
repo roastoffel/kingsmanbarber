@@ -27,6 +27,14 @@ header {
   align-items: center;
 }
 
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .logo-icon {
   width: clamp(30px, 3.75vw, 54px);
   height: auto;
@@ -41,17 +49,74 @@ header {
   white-space: nowrap;
 }
 
-nav ul {
+header nav ul {
   list-style: none;
-  display: flex;
-  gap: 1.5vw;
   margin: 0;
   padding: 0;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #333;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-nav a {
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 10px 15px;
   color: white;
   text-decoration: none;
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s ease, font-weight 0.3s ease, text-decoration 0.3s ease;
+}
+
+header nav ul.show {
+  display: flex;
+}
+
+@media (min-width: 801px) {
+  header nav ul {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+    gap: 1.5vw;
+  }
+
+  header nav ul li {
+    padding-left: 0;
+  }
+
+  header nav ul li::before {
+    content: none;
+  }
+
+  header nav ul li a {
+    padding: 0;
+  }
+}
+
+header nav a:hover {
+  color: #b29146;
+}
+
+header nav a.active-link {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-underline-offset: 4px;
 }
 
 .hero {
@@ -101,8 +166,8 @@ nav a {
   margin: 0.5vh;
   cursor: pointer;
   font-size: 1em;
-  font-family: "Archivo ExtraCondensed", sans-serif;
-  font-weight: 400;
+  font-family: "Gotham Medium", sans-serif;
+  font-weight: 500;
 }
 
 .hero button:nth-of-type(1) {
@@ -129,54 +194,191 @@ nav a {
 }
 
 @media (max-width: 800px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    background-color: #333;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
   .menu-toggle {
     display: block;
   }
+}
 
-  .hero-content-wrapper {
-    transform: translateX(-50%) translateY(-50%);
+.contacto-light-area {
+  background-color: #000;
+  background-image: none;
+  color: white;
+  padding: clamp(3rem, 6vw, 5rem) 2vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.newsletter-section {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-subscribe-label {
+  font-family: "Archivo ExtraCondensed", sans-serif;
+  font-size: clamp(1.2em, 2vw, 1.5em);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #b29146;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.newsletter-form-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  order: 2;
+}
+
+.newsletter-form-wrapper input[type="email"] {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Archivo ExtraCondensed Light", sans-serif;
+  font-size: clamp(0.9em, 1.5vw, 1.1em);
+  flex: 8 1 0;
+  background-color: #333;
+  color: white;
+}
+
+.newsletter-form-wrapper button {
+  background-color: #b29146;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Archivo ExtraCondensed", sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.9em, 1.5vw, 1.1em);
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  flex: 1 0 auto;
+}
+
+.newsletter-form-wrapper button:hover {
+  background-color: #a0803a;
+}
+
+.newsletter-text {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 500;
+  font-size: clamp(1em, 1.8vw, 1.2em);
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  order: 3;
+}
+
+.sitemap-section {
+  text-align: left;
+}
+
+.sitemap-title {
+  font-family: "Archivo ExtraCondensed", sans-serif;
+  font-size: clamp(1.2em, 2vw, 1.5em);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #b29146;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sitemap-nav {
+  display: block;
+}
+
+.sitemap-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sitemap-nav ul li {
+  position: relative;
+  padding-left: 15px;
+}
+
+.sitemap-nav ul li::before {
+  content: "•";
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 1.2em;
+  line-height: inherit;
+}
+
+.sitemap-nav a {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.72em, 1.2vw, 0.88em);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.sitemap-nav a:hover {
+  color: #b29146;
+}
+
+.copyright-section {
+  padding-top: 20px;
+  border-top: 1px solid #b29146;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.copyright-section p {
+  font-family: "Archivo ExtraCondensed Light", sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.8em, 1.2vw, 0.9em);
+  color: white;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-main-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .newsletter-form-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newsletter-form-wrapper input[type="email"] {
+    width: 100%;
+  }
+
+  .newsletter-form-wrapper button {
+    width: 100%;
+  }
+
+  .sitemap-nav ul {
+    align-items: flex-start;
   }
 }
 
-@media (max-width: 900px) {
-  .hero-title .break-line {
-    display: block;
-  }
-}
-
-@media (min-width: 768px) {
-  nav ul {
-    gap: 2vw;
-  }
-
-  .hero button {
-    font-size: 1.2em;
-  }
-}
-
-@media (min-width: 1024px) {
-  header {
-    padding: 2vh 4vw;
-  }
-
-  .hero {
-    padding: 0 4vw;
+@media (max-width: 480px) {
+  .contacto-light-area {
+    padding: clamp(2rem, 5vw, 3rem) 2vw;
   }
 }
