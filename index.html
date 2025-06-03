@@ -22,14 +22,36 @@
           <h1>Kingsman Barber</h1>
         </a>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#barbeiros">Barbeiros</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-          <li><a href="#agendar">Agendar Horário</a></li>
-        </ul>
-      </nav>
+      <div class="menu-social">
+        <nav>
+          <ul>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#barbeiros">Barbeiros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li>
+              <a
+                href="https://wa.me/351916834770?text=Oi%20gostaria%20de%20fazer%20uma%20marca%C3%A7%C3%A3o%3F"
+                target="_blank"
+                >Agendar Horário</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="social-icons">
+          <a
+            href="https://www.instagram.com/kingsman_barberservice"
+            target="_blank"
+          >
+            <img src="./img/instagram-icon.png" alt="Instagram" />
+          </a>
+          <a
+            href="https://www.facebook.com/kingsmanthebarberservice"
+            target="_blank"
+          >
+            <img src="./img/facebook-icon.png" alt="Facebook" />
+          </a>
+        </div>
+      </div>
       <button class="menu-toggle">☰</button>
     </header>
 
@@ -41,8 +63,14 @@
             <br class="break-line" />
             <span class="hero-text-medium">GANHA PODER</span>
           </h2>
-          <button>Conheça nossos serviços</button>
-          <button>Agende um horário</button>
+          <button onclick="scrollToSection('#servicos')">
+            CONHEÇA NOSSOS SERVIÇOS
+          </button>
+          <button
+            onclick="window.open('https://wa.me/351916834770?text=Oi%20gostaria%20de%20fazer%20uma%20marca%C3%A7%C3%A3o%3F')"
+          >
+            AGENDAR HORÁRIO
+          </button>
         </div>
       </section>
     </main>
@@ -271,7 +299,13 @@
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#barbeiros">Barbeiros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#agendar">Agendar Horário</a></li>
+                <li>
+                  <a
+                    href="https://wa.me/351916834770?text=Oi%20gostaria%20de%20fazer%20uma%20marca%C3%A7%C3%A3o%3F"
+                    target="_blank"
+                    >Agendar Horário</a
+                  >
+                </li>
               </ul>
             </nav>
           </div>
@@ -294,6 +328,18 @@
       </div>
     </section>
 
+    <script>
+      function scrollToSection(id) {
+        const targetElement = document.querySelector(id);
+        const headerHeight = document.querySelector("header").offsetHeight;
+        const scrollToPosition = targetElement.offsetTop - headerHeight;
+
+        window.scrollTo({
+          top: scrollToPosition,
+          behavior: "smooth",
+        });
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -26,6 +26,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function scrollToSection(id) {
+    const targetElement = document.querySelector(id);
+    if (targetElement) {
+      const headerHeight = header.offsetHeight;
+      const scrollToPosition = targetElement.offsetTop - headerHeight;
+
+      window.scrollTo({
+        top: scrollToPosition,
+        behavior: "smooth",
+      });
+    }
+  }
+
   adjustBodyPadding();
   adjustCurtains();
 
@@ -45,40 +58,17 @@ document.addEventListener("DOMContentLoaded", function () {
   if (logoLink) {
     logoLink.addEventListener("click", function (e) {
       e.preventDefault();
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-        const headerHeight = header.offsetHeight;
-        const scrollToPosition = targetElement.offsetTop - headerHeight;
-
-        window.scrollTo({
-          top: scrollToPosition,
-          behavior: "smooth",
-        });
-      }
+      scrollToSection(this.getAttribute("href"));
     });
   }
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
+      scrollToSection(this.getAttribute("href"));
 
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-        const headerHeight = header.offsetHeight;
-        const scrollToPosition = targetElement.offsetTop - headerHeight;
-
-        window.scrollTo({
-          top: scrollToPosition,
-          behavior: "smooth",
-        });
-
-        if (navUl.classList.contains("show")) {
-          navUl.classList.remove("show");
-        }
+      if (navUl.classList.contains("show")) {
+        navUl.classList.remove("show");
       }
     });
   });
